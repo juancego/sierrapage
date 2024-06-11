@@ -14,6 +14,26 @@ function openTab(event, tabName) {
     // Mostrar la pestaña actual y añadir la clase activa al enlace de pestaña
     document.getElementById(tabName).style.display = 'block';
     event.currentTarget.className += ' active';
+
+    // Actualizar el título de la pestaña del navegador
+    var pageTitle = "";
+    switch(tabName) {
+        case 'home':
+            pageTitle = "Inicio";
+            break;
+        case 'services':
+            pageTitle = "Servicios";
+            break;
+        case 'about':
+            pageTitle = "Sobre Nosotros";
+            break;
+        case 'contact':
+            pageTitle = "Contacto";
+            break;
+        default:
+            pageTitle = "Transporte Empresarial Siera";
+    }
+    document.title = pageTitle + " - Transporte Empresarial Siera";
 }
 
 // Mostrar la pestaña "Inicio" por defecto
