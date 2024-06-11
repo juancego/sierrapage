@@ -3,22 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descripción de tu sitio web">
-    <meta name="keywords" content="palabras clave, separadas, por, comas">
-    <meta name="author" content="Tu Nombre">
-    <title>Mi Sitio Web - Descripción breve</title>
+    <title>Empresa de Transporte</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Mi Sitio Web</h1>
+        <nav>
+            <img src="images/logo.png" alt="Logo Empresa de Transporte" class="logo">
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <p>Este es un párrafo de ejemplo.</p>
-    </main>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a Nuestra Empresa de Transporte</h1>
+            <p>Soluciones de transporte eficientes y confiables para tu negocio.</p>
+            <a href="#services" class="btn">Nuestros Servicios</a>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Transporte de Carga</h3>
+                <p>Ofrecemos soluciones seguras y rápidas para el transporte de carga.</p>
+            </div>
+            <div class="service-card">
+                <h3>Logística</h3>
+                <p>Optimización de rutas y gestión logística para mejorar la eficiencia.</p>
+            </div>
+            <div class="service-card">
+                <h3>Transporte Internacional</h3>
+                <p>Servicios de transporte internacional para expandir tu negocio.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa con años de experiencia en el sector de transporte, comprometidos con la excelencia y la satisfacción del cliente.</p>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <textarea name="message" placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
     <footer>
-        <p>&copy; 2024 Mi Sitio Web</p>
+        <p>&copy; 2024 Empresa de Transporte. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
