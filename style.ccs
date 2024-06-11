@@ -1,17 +1,134 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-header, footer {
-    background-color: #333;
+header {
+    background-color: #007bff;
+    padding: 1rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #ff6f61;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.services {
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.about {
+    padding: 2rem 1rem;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.contact {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 1em 0;
-}
-
-main {
-    padding: 1em;
+    padding: 1rem;
 }
