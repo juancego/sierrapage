@@ -43,3 +43,4 @@ function openTab(event, tabName) {
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.tab-link').click();
 });
+
