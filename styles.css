@@ -1,142 +1,90 @@
-/* General */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f5f5f7;
-    color: #1d1d1f;
 }
 
 header {
-    background: #fff;
-    border-bottom: 1px solid #e0e0e5;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #333;
+    color: #fff;
+    padding: 15px 20px;
 }
 
-nav {
+header nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
 }
 
-nav .logo {
-    width: 150px;
+header .logo {
+    height: 50px;
 }
 
-nav .nav-links {
+.nav-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
 }
 
-nav .nav-links li {
-    margin: 0 15px;
+.nav-links li {
+    margin: 0 10px;
 }
 
-nav .nav-links a {
-    text-decoration: none;
-    color: #1d1d1f;
-    font-weight: 700;
-    font-size: 16px;
-    position: relative;
-    padding-bottom: 5px;
-}
-
-nav .nav-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #0071e3;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-nav .nav-links a:hover::after, nav .nav-links a.active::after {
-    width: 100%;
-}
-
-.hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.nav-links a {
     color: #fff;
-    margin-top: 60px; /* Ajuste para el encabezado fijo */
-}
-
-.hero .hero-content {
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: #0071e3;
-    color: #fff;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: 700;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #005bb5;
-}
-
-main {
-    padding: 80px 20px 20px; /* Ajuste para el encabezado fijo */
-    max-width: 1200px;
-    margin: auto;
 }
 
 .tab-content {
-    display: none;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
-.tab-content h2 {
-    margin-top: 0;
-    animation: slideInLeft 1s ease-out;
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in 1s forwards;
+    opacity: 0;
+}
+
+.hero-content .btn {
+    background: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in 2s forwards;
+    opacity: 0;
 }
 
 .service-cards {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .service-card {
     background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
     width: 30%;
     margin-bottom: 20px;
@@ -220,7 +168,9 @@ footer {
 }
 
 #survey select,
-#survey textarea {
+#survey textarea,
+#survey input[type="text"],
+#survey input[type="email"] {
     margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
