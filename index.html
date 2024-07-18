@@ -63,135 +63,27 @@
         </section>
         <section id="survey" class="tab-content" style="display:none;">
             <h2>Encuesta de Satisfacción</h2>
-            <div class="container" id="introContainer">
-        <h1>Bienvenido a nuestra Encuesta de Satisfacción</h1>
-        <p>Gracias por utilizar el servicio de Transporte Empresarial Sierra M SAS. Valoramos su opinión y nos gustaría conocer su experiencia para poder mejorar nuestros servicios.</p>
-        <button id="startSurveyButton">Comenzar Encuesta</button>
-    </div>
-
-    <div class="container" id="surveyContainer" style="display:none;">
-        <h1>Encuesta de Satisfacción del Servicio de Transporte</h1>
-        <form id="surveyForm">
-            <div class="form-group">
-                <label for="nombre">Cliente:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="conductor">Conductor que prestó el servicio:</label>
-                <select id="conductor" name="conductor" required>
-                    <option value="">Seleccione</option>
-                    <option value="fredy">Fredy Orlando Pineda Moreno</option>
-                    <option value="jeferson">Jeferson Alexander González Tijaro</option>
-                    <option value="yhovany">Jose Yhovany Ruiz Soto</option>
-                    <option value="edgar">Edgar Eduardo Sierra Moreno</option>
-                    <option value="diego">Diego Andrés Sierra Moreno</option>
-                    <option value="leoguzman">Félix Leonardo Guzmán Garzón</option>
-                    <option value="andres">Andrés Ferney Salazar Urrea</option>
-
-                    <!-- Agrega más opciones según sea necesario -->
+            <button id="start-survey-btn" class="btn" onclick="startSurvey()">Iniciar Encuesta</button>
+            <form id="survey-form" action="#" method="post" style="display:none;" onsubmit="submitSurvey(event)">
+                <label for="satisfaction">¿Qué tan satisfecho estás con nuestro servicio?</label>
+                <select name="satisfaction" id="satisfaction" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="very_satisfied">Muy Satisfecho</option>
+                    <option value="satisfied">Satisfecho</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Insatisfecho</option>
+                    <option value="very_dissatisfied">Muy Insatisfecho</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="vehiculo">Vehículo que prestó el servicio:</label>
-                <select id="vehiculo" name="vehiculo" required>
-                    <option value="">Seleccione</option>
-                    <option value="kzv750">KZV 750</option>
-                    <option value="ljv152">LJV 152</option>
-                    <option value="lun364">LUN 364</option>
-                    <option value="nos709">NOS 709</option>
-                    <option value="nho082">NHO 082</option>
-                    <option value="nho140">NHO 140</option>
-                    <!-- Agrega más opciones según sea necesario -->
-                </select>
-            </div>
-            <div class="form-group">
-                <label>El cumplimiento en los horarios y trayectos establecidos fue:</label>
-                <div class="radio-group">
-                    <input type="radio" id="horarios1" name="horarios" value="1" required>
-                    <label for="horarios1">1</label>
-                    <input type="radio" id="horarios2" name="horarios" value="2">
-                    <label for="horarios2">2</label>
-                    <input type="radio" id="horarios3" name="horarios" value="3">
-                    <label for="horarios3">3</label>
-                    <input type="radio" id="horarios4" name="horarios" value="4">
-                    <label for="horarios4">4</label>
-                    <input type="radio" id="horarios5" name="horarios" value="5">
-                    <label for="horarios5">5</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>El cumplimiento de las normas de tránsito y Políticas de Uso de Cinturón de Seguridad, No uso de equipos móviles durante la conducción y límites de velocidad por parte del conductor fue:</label>
-                <div class="radio-group">
-                    <input type="radio" id="normas1" name="normas" value="1" required>
-                    <label for="normas1">1</label>
-                    <input type="radio" id="normas2" name="normas" value="2">
-                    <label for="normas2">2</label>
-                    <input type="radio" id="normas3" name="normas" value="3">
-                    <label for="normas3">3</label>
-                    <input type="radio" id="normas4" name="normas" value="4">
-                    <label for="normas4">4</label>
-                    <input type="radio" id="normas5" name="normas" value="5">
-                    <label for="normas5">5</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>El porte del uniforme y atención por parte del conductor durante la prestación del servicio fue:</label>
-                <div class="radio-group">
-                    <input type="radio" id="uniforme1" name="uniforme" value="1" required>
-                    <label for="uniforme1">1</label>
-                    <input type="radio" id="uniforme2" name="uniforme" value="2">
-                    <label for="uniforme2">2</label>
-                    <input type="radio" id="uniforme3" name="uniforme" value="3">
-                    <label for="uniforme3">3</label>
-                    <input type="radio" id="uniforme4" name="uniforme" value="4">
-                    <label for="uniforme4">4</label>
-                    <input type="radio" id="uniforme5" name="uniforme" value="5">
-                    <label for="uniforme5">5</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>El aseo (Interior y Exterior) y estado de mantenimiento del vehículo es:</label>
-                <div class="radio-group">
-                    <input type="radio" id="aseo1" name="aseo" value="1" required>
-                    <label for="aseo1">1</label>
-                    <input type="radio" id="aseo2" name="aseo" value="2">
-                    <label for="aseo2">2</label>
-                    <input type="radio" id="aseo3" name="aseo" value="3">
-                    <label for="aseo3">3</label>
-                    <input type="radio" id="aseo4" name="aseo" value="4">
-                    <label for="aseo4">4</label>
-                    <input type="radio" id="aseo5" name="aseo" value="5">
-                    <label for="aseo5">5</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Califique en general su grado de satisfacción con el servicio prestado por nuestra empresa:</label>
-                <div class="radio-group">
-                    <input type="radio" id="satisfaccion1" name="satisfaccion" value="1" required>
-                    <label for="satisfaccion1">1</label>
-                    <input type="radio" id="satisfaccion2" name="satisfaccion" value="2">
-                    <label for="satisfaccion2">2</label>
-                    <input type="radio" id="satisfaccion3" name="satisfaccion" value="3">
-                    <label for="satisfaccion3">3</label>
-                    <input type="radio" id="satisfaccion4" name="satisfaccion" value="4">
-                    <label for="satisfaccion4">4</label>
-                    <input type="radio" id="satisfaccion5" name="satisfaccion" value="5">
-                    <label for="satisfaccion5">5</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="comentarios">Comentarios, sugerencias o felicitaciones:</label>
-                <textarea id="comentarios" name="comentarios"></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-
-    <div class="container" id="thankYouContainer" style="display:none;">
-        <h1>Gracias por su participación</h1>
-        <p>Gracias por completar la encuesta. Valoramos mucho su opinión.</p>
-        <button id="visitWebsiteButton">Visitar nuestra página web</button>
-    </div>
+                <label for="comments">Comentarios adicionales:</label>
+                <textarea name="comments" id="comments" placeholder="Tus comentarios"></textarea>
+                <button type="submit" class="btn">Enviar Encuesta</button>
+            </form>
+        </section>
+        <section id="thankyou" class="tab-content" style="display:none;">
+            <h2>¡Gracias por tu feedback!</h2>
+            <p>Tu opinión es muy importante para nosotros. Agradecemos el tiempo que te tomaste para completar la encuesta.</p>
+            <button class="btn" onclick="openTab(event, 'home')">Volver al Inicio</button>
+            <button class="btn" onclick="window.open('https://www.facebook.com/tuempresa', '_blank')">Visítanos en Facebook</button>
         </section>
     </main>
     <footer>
@@ -200,3 +92,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
