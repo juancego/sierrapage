@@ -30,6 +30,9 @@ function openTab(event, tabName) {
         case 'contact':
             pageTitle = "Contacto";
             break;
+        case 'survey':
+            pageTitle = "Encuesta";
+            break;
         default:
             pageTitle = "Transporte Empresarial Siera";
     }
