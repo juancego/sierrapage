@@ -1,3 +1,4 @@
+/* General */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -99,6 +100,11 @@ nav .nav-links a:hover::after, nav .nav-links a.active::after {
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #005bb5;
 }
 
 main {
@@ -232,3 +238,4 @@ footer {
     margin-top: 20px;
     align-self: flex-start;
 }
+
